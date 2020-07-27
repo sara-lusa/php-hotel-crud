@@ -1,18 +1,6 @@
 <?php include __DIR__ . '/database.php' ?>
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Boolean Hotel</title>
-
-    <link rel="stylesheet" href="dist/app.css">
-  </head>
-  <body>
-
-    <header>
-      <h1>Boolean Hotel</h1>
-    </header>
+<?php include __DIR__ . '/env.php' ?>
+<?php include __DIR__ . '/partials/header.php'?>
 
     <main>
       <table>
@@ -27,6 +15,9 @@
           <td><?php echo $room['id']?></td>
           <td><?php echo $room['room_number']?></td>
           <td><?php echo $room['floor']?></td>
+          <td>
+            <a href="#">+Info</a>
+          </td>
         </tbody>
         <?php } ?>
 

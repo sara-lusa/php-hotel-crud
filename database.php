@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "boolean-hotel";
+include __DIR__ . '/env.php';
 
 // Connect
 $conn = new mysqli($servername, $username, $password, $dbname);
