@@ -1,0 +1,13 @@
+@import 'partials/_variables';
+@import 'partials/_common';
+@import 'partials/_header';
+
+main {
+  padding: $padding-sections;
+  font-size: 24px;
+
+  table td {
+    padding: 5px 10px;
+    border: 2px solid black;
+  }
+}
