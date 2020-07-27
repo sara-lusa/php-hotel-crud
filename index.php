@@ -1,3 +1,5 @@
+<?php include __DIR__ . '/database.php' ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,23 +22,14 @@
           <th>Floor</th>
         </thead>
 
+        <?php foreach ($rooms as $room) { ?>
         <tbody>
-          <td>1</td>
-          <td>101</td>
-          <td>3</td>
+          <td><?php echo $room['id']?></td>
+          <td><?php echo $room['room_number']?></td>
+          <td><?php echo $room['floor']?></td>
         </tbody>
+        <?php } ?>
 
-        <tbody>
-          <td>2</td>
-          <td>102</td>
-          <td>3</td>
-        </tbody>
-
-        <tbody>
-          <td>3</td>
-          <td>104</td>
-          <td>5</td>
-        </tbody>
       </table>
     </main>
 
