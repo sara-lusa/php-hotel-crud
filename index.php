@@ -3,6 +3,12 @@
 <?php include __DIR__ . '/partials/header.php'?>
 
     <main>
+
+      <?php if(isset($_GET['uproom'])) { ?>
+        <h3>Stanza numero <?php echo $_GET['uproom'] ?> aggiornata con successo</h3>
+      <?php } ?>
+
+
       <table>
         <thead>
           <th>ID</th>
@@ -17,6 +23,8 @@
           <td><?php echo $room['floor']?></td>
           <td>
             <a href="<?php echo $base_path . '/show/show.php?id=' . $room['id']?>">+Info</a>
+
+            <a href="<?php echo $base_path . '/update/edit.php?id=' . $room['id']?>">Update</a>
           </td>
         </tbody>
         <?php } ?>
