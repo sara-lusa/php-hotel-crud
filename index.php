@@ -16,7 +16,7 @@
           <td><?php echo $room['room_number']?></td>
           <td><?php echo $room['floor']?></td>
           <td>
-            <a href="#">+Info</a>
+            <a href="<?php echo $base_path . '/show/show.php?id=' . $room['id']?>">+Info</a>
           </td>
         </tbody>
         <?php } ?>

@@ -10,4 +10,6 @@
 
     <header>
       <h1>Boolean Hotel</h1>
+
+      <a href="<?php echo $base_path; ?>">Torna alla Pagina Principale</a>
     </header>
