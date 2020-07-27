@@ -1,13 +1,19 @@
+<?php include __DIR__ . '/server.php' ?>
 <?php include __DIR__ . '/../env.php' ?>
 <?php include __DIR__ . '/../partials/header.php' ?>
 
 <main>
-  <h2>Stanza numero x</h2>
-  <ul>
-    <li>ID: 2</li>
-    <li>Room Number: 34</li>
-    <li>Floor: 2</li>
-    <li>Beds: 3</li>
-    <li>Created at: 2020</li>
-  </ul>
+
+  <?php if(empty($room)) { ?>
+    <p>Questa camera non è disponibile</p>
+  <?php } else { ?>
+    <h2>Stanza numero <?php echo $room['room_number']; ?></h2>
+    <ul>
+      <li>ID: <?php echo $room['id']; ?></li>
+      <li>Room Number: <?php echo $room['room_number']; ?></li>
+      <li>Floor: <?php echo $room['floor']; ?></li>
+      <li>Beds: <?php echo $room['beds']; ?></li>
+      <li>Updated at: <?php echo $room['updated_at']; ?></li>
+    </ul>
+  <?php }?>
 </main>
